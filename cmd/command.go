@@ -17,7 +17,8 @@ var runCmd = &cobra.Command{
 			Name:     name,
 			LastName: lastName,
 		}
-		person.SayMyName()
+
+		person.Greeting()
 	},
 }
 
@@ -27,5 +28,5 @@ func init() {
 	runCmd.PersistentFlags().String("name", "", "Tell your name.")
 	runCmd.PersistentFlags().String("lastName", "", "Tell your last name.")
 
-	_ = viper.BindEnv("SOME_ENV")
+	_ = viper.BindEnv("SOME_ENV") // Example how to bind envinroments
 }

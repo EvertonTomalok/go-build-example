@@ -7,7 +7,7 @@ type Person struct {
 	LastName string
 }
 
-func (p *Person) SayMyName() {
+func (p *Person) Greeting() {
 	if p.Name == "" && p.LastName == "" {
 		fmt.Println("You must provide your name via CLI. (--name and --lastName args)")
 		return
